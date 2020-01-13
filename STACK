@@ -1,0 +1,98 @@
+ #include<stdio.h>
+int MAXSIZE = 8;
+int stack[8];
+int top = -1;
+
+int empty() {
+
+if(top == -1)
+return 1;
+else
+return 0;
+}
+
+int full() {
+
+if(top == MAXSIZE)
+return 1;
+else
+return 0;
+}
+
+int peek() {
+return stack[top];
+}
+
+int pop() {
+int data;
+
+if(!empty()) {
+data = stack[top];
+top = top - 1;
+return data;
+} else {
+printf("Could not retrieve data, Stack is empty.\n");
+}
+}
+
+int push(int data) {
+
+if(!full()) {
+top=top+1;
+stack[top] = data;
+} else {
+printf("Could not insert data, Stack is full.\n");
+}
+}
+int main()
+{
+int opera,PUSH,POP,EMPTY,FULL,x,y,z,A,B,C=0;
+for(y=0;y<10;y++)
+{
+
+
+printf("\n SELECT OPERATOR \n");
+printf(" 1 PUSH \n");
+printf(" 2 POP \n");
+printf(" 3 CHECK EMPTY \n");
+printf(" 4 CHECK FULL \n");
+printf(" 5 PEEK \n");
+scanf("%d",&opera);
+if (opera==1)
+{
+printf("ENTER NUMBER ");
+scanf("%d",&PUSH);
+z=push(PUSH);
+
+}
+else if (opera==2)
+{
+C=pop();
+printf(" POP IS %d",C);
+}
+else if (opera==3)
+{
+empty();
+}
+else if (opera==4)
+{
+x=empty();
+printf(" \n IF EMPTY ANSWER IS %d \n",x);
+}
+else if (opera==4)
+{
+full();
+}
+else if (opera==5)
+{
+
+A=peek();
+printf(" \n PEEK NUMBER IS %d\n",A);
+}
+else
+{
+printf("SILVA");
+}
+}
+
+}
