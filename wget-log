@@ -1,0 +1,6 @@
+--2022-04-12 07:46:43--  https://www.google.com/search?q=students
+Resolving www.google.com (www.google.com)... 142.251.12.103, 142.251.12.104, 142.251.12.106, ...
+Connecting to www.google.com (www.google.com)|142.251.12.103|:443... connected.
+HTTP request sent, awaiting response... 403 Forbidden
+2022-04-12 07:46:45 ERROR 403: Forbidden.
+
